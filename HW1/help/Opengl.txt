@@ -1,0 +1,3 @@
+OpenGL Tuturial: http://ogldev.atspace.co.uk/
+
+OpenGL for Windows Visual Studio: http://www.rastertek.com/tutgl40.html
