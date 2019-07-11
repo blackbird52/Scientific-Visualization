@@ -10,6 +10,7 @@ After completion of this course, the students should - be able to write computer
 
 **【Reference Readings】**
 
-1. The Visualization Handbook, by Charles Hansen and Christopher Johnson, Academic Press, 2005 2. I
-2. nformation Visualization:An Introduction, Robert Spence 
-3. 3. The Visualization Toolkit: An Object-Oriented Approach to 3D Graphics, by William Schroeder, Ken Martin, 3rd Edition, 2006 
+1. *The Visualization Handbook*, by Charles Hansen and Christopher Johnson, Academic Press, 2005
+2. *Information Visualization: An Introduction*, Robert Spence 
+3. *The Visualization Toolkit: An Object-Oriented Approach to 3D Graphics*, by William Schroeder, Ken Martin, 3rd Edition, 2006 
+
