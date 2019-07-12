@@ -26,8 +26,8 @@ ESC:	exit
 
 #define ESC 27
 
-static GLfloat red[] = { 1, 0, 0 }, green[] = { 0, 1, 0 }; /* ,blue[]={0,0,1}; */
-static int shoulder = 0, elbow = 0;
+static GLfloat red[] = { 1, 0, 0 }, green[] = { 0, 1, 0 } ,blue[]={0,0,1};  
+static int shoulder = 0, elbow = 0, finger =30;
 static int xrot = 0, yrot = 0, zrot = 0;
 static GLfloat xshift = -1.0, yshift = 0.0, zoom = -3.0;
 
@@ -73,6 +73,26 @@ void draw_stuff()
 
 	/* Put the "hand" code here...*/
 
+	glColor3fv(blue);
+	glTranslatef(2.20, 0.0, 0.0);
+	glPushMatrix();
+	glTranslatef(-1.00, 0.0, 0.0);
+	glRotatef((float)finger,0,0,1);
+	glTranslatef(1.00, 0.0, 0.0);
+	glScalef(2.00, 0.1, 0.10);
+	glutSolidCube(1.0);
+	glPopMatrix();
+
+ 
+	glPushMatrix();
+	glTranslatef(-1.00, 0.0, 0.0);
+	glRotatef((float)finger * -1, 0, 0, 1);
+	glTranslatef(1.00, 0.0, 0.0);
+	glScalef(2.00, 0.1, 0.10);
+	glutSolidCube(1.0);
+	glPopMatrix();
+
+
 	glPopMatrix();
 	glPopMatrix();
 	glutSwapBuffers();
@@ -96,26 +116,48 @@ void kb(unsigned char key, int x, int y)
 	switch (key)
 	{
 	case 's':
-		shoulder = (shoulder + 5) % 360;
+		if (shoulder < 40)
+		{
+			shoulder = (shoulder + 5) % 360;
+		}
 		glutPostRedisplay();
 		break;
 	case 'S':
-		shoulder = (shoulder - 5) % 360;
+		if (shoulder > -40)
+		{
+			shoulder = (shoulder - 5) % 360;
+		}
 		glutPostRedisplay();
 		break;
 	case 'e':
-		elbow = (elbow + 5) % 360;
+		if (elbow < 40)
+		{
+			elbow = (elbow + 5) % 360;
+		}
 		glutPostRedisplay();
 		break;
 	case 'E':
-		elbow = (elbow - 5) % 360;
+		if (elbow > -40)
+		{
+			elbow = (elbow - 5) % 360;
+		}
 		glutPostRedisplay();
 		break;
 	case 'C':
 		/* close the "hand" */
+		if (finger > 0)
+		{
+			finger = (finger - 2) % 360;
+		}
+		glutPostRedisplay();
 		break;
 	case 'O':
 		/* open the "hand" */
+		if (finger < 40)
+		{
+			finger = (finger + 2) % 360;
+		}
+		glutPostRedisplay();
 		break;
 	case 'x':
 		xshift += .25;
