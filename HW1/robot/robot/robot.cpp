@@ -74,24 +74,22 @@ void draw_stuff()
 	/* Put the "hand" code here...*/
 
 	glColor3fv(blue);
-	glTranslatef(2.20, 0.0, 0.0);
+	glTranslatef(2.0, 0.0, 0.0);
 	glPushMatrix();
-	glTranslatef(-1.00, 0.0, 0.0);
-	glRotatef((float)finger,0,0,1);
-	glTranslatef(1.00, 0.0, 0.0);
+	glTranslatef(-1.00, 0.1, 0.0);
+	glRotatef((GLfloat)finger,0,0,1);
+	glTranslatef(1.00, -0.1, 0.0);
 	glScalef(2.00, 0.1, 0.10);
 	glutSolidCube(1.0);
 	glPopMatrix();
 
  
 	glPushMatrix();
-	glTranslatef(-1.00, 0.0, 0.0);
-	glRotatef((float)finger * -1, 0, 0, 1);
-	glTranslatef(1.00, 0.0, 0.0);
+	glTranslatef(-1.00, -0.1, 0.0);
+	glRotatef((GLfloat)(finger * -1), 0, 0, 1);
+	glTranslatef(1.00, 0.1, 0.0);
 	glScalef(2.00, 0.1, 0.10);
 	glutSolidCube(1.0);
-	glPopMatrix();
-	glTranslatef(-2.20, 0.0, 0.0);
 	glPopMatrix();
 
 
