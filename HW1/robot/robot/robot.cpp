@@ -91,6 +91,8 @@ void draw_stuff()
 	glScalef(2.00, 0.1, 0.10);
 	glutSolidCube(1.0);
 	glPopMatrix();
+	glTranslatef(-2.20, 0.0, 0.0);
+	glPopMatrix();
 
 
 	glPopMatrix();
