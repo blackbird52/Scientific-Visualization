@@ -116,28 +116,22 @@ void kb(unsigned char key, int x, int y)
 	switch (key)
 	{
 	case 's':
-		if (shoulder < 40)
-		{
-			shoulder = (shoulder + 5) % 360;
-		}
+		shoulder = (shoulder + 5) % 360;
 		glutPostRedisplay();
 		break;
 	case 'S':
-		if (shoulder > -40)
-		{
-			shoulder = (shoulder - 5) % 360;
-		}
+		shoulder = (shoulder - 5) % 360;
 		glutPostRedisplay();
 		break;
 	case 'e':
-		if (elbow < 40)
+		if (elbow < 150)
 		{
 			elbow = (elbow + 5) % 360;
 		}
 		glutPostRedisplay();
 		break;
 	case 'E':
-		if (elbow > -40)
+		if (elbow > -150)
 		{
 			elbow = (elbow - 5) % 360;
 		}
@@ -153,7 +147,7 @@ void kb(unsigned char key, int x, int y)
 		break;
 	case 'O':
 		/* open the "hand" */
-		if (finger < 40)
+		if (finger < 90)
 		{
 			finger = (finger + 2) % 360;
 		}
