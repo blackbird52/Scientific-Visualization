@@ -5,11 +5,9 @@ keyboard controls:
 s/S:	Positive/negative shoulder rotation
 e/E:	Positive/negative elbow rotation
 O/C:	Open/Close the hand -- YOU GET TO IMPLEMENT THIS
-
 x/X:	Positive/negative X-axis shift of the model
 y/Y:	Positive/negative Y-axis shift of the model
 UP/DOWN ARROWS:	(zoom) Z-axis shift of the model
-
 LEFT/RIGHT ARROWS:	Y-axis rotations
 PAGE UP/DOWN:	X-axis rotations
 ESC:	exit
@@ -243,4 +241,3 @@ int main(int argc, char * argv[])
 	glutMainLoop();
 	return 0;
 }
-
